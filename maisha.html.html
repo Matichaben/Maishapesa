@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <style>
+        .time-date {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: darkblue;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="time-date" id="time-date"></div>
+
+    <script>
+        function updateTimeDate() {
+            var date = new Date();
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+            var formattedDate = date.toLocaleDateString('en-US', options);
+            document.getElementById("time-date").innerHTML = formattedDate;
+        }
+
+        setInterval(updateTimeDate, 1000); // Update every second
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+  const texts = ['First sentence.', 'Second sentence.', 'Third sentence.']; // Add your desired sentences here
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+function type() {
+  if (count === texts.length) {
+    count = 0;
+  }
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  document.getElementById('typewriter-text').textContent = letter;
+
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+  }
+
+  setTimeout(type, 100); // Adjust the typing speed (milliseconds) as needed
+}
+
+type();
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .column {
+      width: 100%;
+      float: left;
+    }
+
+    @media (min-width: 600px) {
+      .column {
+        width: 50%;
+      }
+    }
+  </style>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Add more styles for other elements as needed */
+
+    @media only screen and (max-width: 600px) {
+      /* Add CSS styles for smaller screens or mobile devices */
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+    <style>
+    .footer {
+      text-align: center;
+    }
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .social-icons li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .social-icons li a {
+      color: #333;
+      font-size: 18px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <title>MAISHAPESA</title>
+  <style>
+        #logo {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    </style>
+  <style>
+    body {
+      background-color: white;
+      color: darkblue;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: darkblue;
+      padding: 10px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 0 5px;
+    }
+
+    /* Welcome Section */
+    .welcome {
+      background-color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Columns */
+    .columns {
+       display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    /* Shadow Partitions */
+    .columns > div:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-button {
+      display: inline-block;
+      background-color: darkblue;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .custom-button:hover {
+      background-color: darkred;
+    }
+
+    .custom-button::before {
+      content: "\f040";
+      font-family: FontAwesome;
+      margin-right: 10px;
+    }
+    .butn{
+      justify-content: center;
+      padding-top: 5px;
+      text-align: center;
+    }
+    .column{
+      width: 780px;
+    }
+  </style>
+    <style>
+    .container {
+      display: flex;
+    }
+
+    .column {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      animation: slide-in 2s ease-in-out;
+    }
+
+    @keyframes slide-in {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+      <img id="logo" src="logo2.jpeg" alt="Logo">
+
+</body>
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Loan Types</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="welcome">
+    <h1 class="typewriter">MAISHAPESA LOAN APP</h1>
+    <p>Get the best loan options tailored for you.</p>
+  </div>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+<body>
+
+<h2>USIWE NA SHIDA,NJOO TUKUSAIDIE</h2>
+<p>Repay the loan on time, the interest is as low as 0.05% per day.CHANGAMKA!!!!.</p>
+
+<div class="row">
+  <div class="column" style="background-color:white;">
+    <h2>Reasons for choosing MAISHAPESA
+</h2>
+    <p>Get a limit that you can always access: Once you are approved for a credit limit with us, you can borrow again without the need to re-apply. This makes it easy and convenient for you to access the funds you need when you need them.</p>
+  </div>
+  <div class="column" style="background-color:white;">
+    <h2>WHO QUALIFIES FOR MAISHAPESA</h2>
+    <p>Who is Eligible for MAISHAPESA Loans? Any person can qualify to receive loans from MAISHAPESA as long as they have an Android phone, an ID, and a registered Safaricom M-Pesa line We are a Licensed lender & regulated by the Central Bank:</p>
+  </div>
+  <div class="column" style="background-color:white;">
+    <h2>What is the purpose for MAISHAPESA</h2>
+    <p>Is MAISHAPESA good for loans? Trusted by millions, MAISHAPESA is licensed and regulated by CBK. MAISHAPESA offers fast growing cash limits up to KSh 50,000.</p>
+  </div>
+</div>
+
+  <div class="butn">
+      <a href="login.html" class="custom-button">Click Here to LOG IN</a>
+  </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <button><i class="fas fa-money-bill-alt"></i> Loans</button>
+        <button><i class="fas fa-wallet"></i> Wallet</button>
+        <button><i class="fas fa-piggy-bank"></i> Savings</button>
+        <button><i class="fas fa-gift"></i> Rewards</button>
+    </div>
+
+     <footer class="footer">
+    <p>&copy; 2023 bentech solutions. All rights reserved.</p>
+    <ul class="social-icons">
+      <li><a href="https://www.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
+
+</body>
+</html>
+
