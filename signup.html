@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid darkblue;
+      border-radius: 5px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: darkblue;
+    }
+    
+    input[type="text"],
+    input[type="tel"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid darkblue;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    
+    button[type="submit"] {
+      background-color: darkblue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+    
+    @media screen and (max-width: 480px) {
+      .container {
+        max-width: 300px;
+      }
+    }
+  </style>
+    <style>
+        #logo {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+	.link{
+	    text-decoration: none;
+}
+    </style>
+</head>
+
+<body>
+        <img id="logo" src="logo2.jpeg" alt="Logo">
+
+  <div class="container">
+    <h1>Sign Up</h1>
+    <form>
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Middle Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="password" placeholder="Password" required>
+      <a class="link"><button type="submit">Sign Up</button></a>
+    </form>
+  </div>
+</body>
+
+</html>
