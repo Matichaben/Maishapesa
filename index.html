@@ -1,34 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <style>
+
+
+<style>
+        body {
+            background-color: darkblue;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
         .time-date {
             position: fixed;
-            top: 10px;
-            right: 10px;
+            top: 0;
+            right: 0;
             padding: 10px;
-            background-color: darkblue;
-            color: #fff;
-            font-family: Arial, sans-serif;
             font-size: 16px;
-            border-radius: 4px;
+        }
 
+        @media (max-width: 768px) {
+            .time-date {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="time-date" id="time-date"></div>
+    <div class="time-date">
+        <script>
+            function updateTime() {
+                var currentTime = new Date();
+                var hours = currentTime.getHours();
+                var minutes = currentTime.getMinutes();
+                var seconds = currentTime.getSeconds();
+                var day = currentTime.getDate();
+                var month = currentTime.getMonth() + 1;
+                var year = currentTime.getFullYear();
 
-    <script>
-        function updateTimeDate() {
-            var date = new Date();
-            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-            var formattedDate = date.toLocaleDateString('en-US', options);
-            document.getElementById("time-date").innerHTML = formattedDate;
-        }
+                // Pad the time and date with leading zeros if required
+                hours = (hours < 10 ? "0" : "") + hours;
+                minutes = (minutes < 10 ? "0" : "") + minutes;
+                seconds = (seconds < 10 ? "0" : "") + seconds;
+                day = (day < 10 ? "0" : "") + day;
+                month = (month < 10 ? "0" : "") + month;
 
-        setInterval(updateTimeDate, 1000); // Update every second
-    </script>
+                // Format the time and date
+                var timeString = hours + ":" + minutes + ":" + seconds;
+                var dateString = day + "/" + month + "/" + year;
+
+                // Update the time and date display
+                document.getElementById("time").innerHTML = timeString;
+                document.getElementById("date").innerHTML = dateString;
+            }
+
+            setInterval(updateTime, 1000); // Update time every second
+        </script>
+
+        <span id="time"></span>
+        <br>
+        <span id="date"></span>
+    </div>
+</body>
+
+
+  <style>
+    /* CSS for side panel */
+    .side-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      z-index: 9999;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s;
+      background-color: white;
+      color: darkblue;
+    }
+
+    .side-panel a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 20px;
+      color: darkblue;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-panel a:hover {
+      color: #f1f1f1;
+    }
+
+    .side-panel .close-btn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /* CSS for button to open side panel */
+    .open-btn {
+      font-size: 30px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: darkblue;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <!-- Button to open side panel -->
+  <button class="open-btn" onclick="openSidePanel()">&#9776;</button>
+
+  <!-- Side panel -->
+  <div id="sidePanel" class="side-panel">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeSidePanel()">&times;</a>
+    <a href="#">Mission</a>
+    <a href="#">Vision</a>
+    <a href="#">About Us</a>
+      <img src="logo2.jpeg" alt="Logo" style="width: 200px; height: 100px;">
+
+  </div>
+
+  <script>
+    function openSidePanel() {
+      document.getElementById("sidePanel").style.width = "250px";
+    }
+
+    function closeSidePanel() {
+      document.getElementById("sidePanel").style.width = "0";
+    }
+  </script>
+</body>
+      
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script>
@@ -94,6 +206,8 @@ type();
       }
     }
   </style>
+
+
     <style>
     .footer {
       text-align: center;
@@ -241,8 +355,76 @@ type();
   </div>
 
   <div class="welcome">
-    <h1 class="typewriter">MAISHAPESA LOAN APP</h1>
-    <p>Get the best loan options tailored for you.</p>
+  <style>
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      background-color: white;
+    }
+
+    .carousel-slide {
+      display: none;
+      text-align: center;
+    }
+
+    .carousel-slide.active {
+      display: block;
+    }
+
+    .carousel-text {
+      font-size: 2em;
+      color: darkblue;
+      padding: 20px;
+    }
+
+    .text-center{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel-slide active">
+      <h1 class="carousel-text">MAISHA PESA LOAN APP</h1>
+    </div>
+    <div class="carousel-slide">
+      <h1 class="carousel-text">WE SERVE YOU AT OUR BEST</h1>
+    </div>
+    <div class="carousel-slide">
+      <h1 class="carousel-text">LOW INTEREST RATES </h1>
+    </div>
+          <div class="carousel-slide">
+      <h1 class="carousel-text">ACHIEVABLE TIME LIMIT </h1>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    var slides = document.querySelectorAll('.carousel-slide');
+    var currentIndex = 0;
+
+    function showSlide(index) {
+      if (index < 0 || index >= slides.length) {
+        return;
+      }
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  </script>
+    <p class="text-center">Get the best loan options tailored for you.</p>
   </div>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -277,8 +459,9 @@ type();
 </style>
 <body>
 
-<h2>USIWE NA SHIDA,NJOO TUKUSAIDIE</h2>
-<p>Repay the loan on time, the interest is as low as 0.05% per day.CHANGAMKA!!!!.</p>
+<h2 class="text-center">USIWE NA SHIDA,NJOO TUKUSAIDIE</h2>
+<p class="text-center">Repay the loan on time, the interest is as low as 0.05% per day.CHANGAMKA!!!!.</p>
+
 
 <div class="row">
   <div class="column" style="background-color:white;">
@@ -320,7 +503,7 @@ type();
 </head>
 <body>
     <div class="footer">
-        <button><i class="fas fa-money-bill-alt"></i> Loans </button>
+        <button><i class="fas fa-money-bill-alt"></i> Loans</button>
         <button><i class="fas fa-wallet"></i> Wallet</button>
         <button><i class="fas fa-piggy-bank"></i> Savings</button>
         <button><i class="fas fa-gift"></i> Rewards</button>
@@ -341,4 +524,3 @@ type();
 
 </body>
 </html>
-
